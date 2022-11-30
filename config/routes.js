@@ -10,11 +10,11 @@ let db = [
 ]
 
 
-app.get('/', (req, res) => {
+routes.get('/', (req, res) => {
     return res.json(db)
 })
 
-app.post('/add', (req, res) => {
+routes.post('/add', (req, res) => {
     const body = req.body
 
     if(!body)
@@ -23,3 +23,4 @@ app.post('/add', (req, res) => {
     db.push(body)
     return res.json(body)
 })
+
