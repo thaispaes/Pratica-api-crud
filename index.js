@@ -16,7 +16,9 @@ let db = [
     {'3': {Nome: 'Cliente 3', Idade: '20'}}
 ]
 
-
+app.get('/', (req, res) => {
+    return res.json(db)
+})
 
 
 app.listen(21262, () => {
